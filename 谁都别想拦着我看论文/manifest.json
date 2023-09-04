@@ -1,0 +1,30 @@
+
+  
+  {
+    "manifest_version": 3,
+    "name": "谁都别想拦着我看论文",
+    "description": "将文本框中的换行替换成空格的功能。",
+    "version": "1.0",
+    "permissions": ["activeTab"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/icon128.jpg",
+        "48": "images/icon128.jpg",
+        "128": "images/icon128.jpg"
+      }
+    },
+    "icons": {
+      "16": "images/icon128.jpg",
+      "48": "images/icon128.jpg",
+      "128": "images/icon128.jpg"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://translate.google.com.hk/*"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ]
+  }
+  
